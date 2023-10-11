@@ -1,0 +1,19 @@
+<h1><%=@pet.name%></h1>
+
+  <ul>
+    <li><%= pet.name %>
+    <li><%= pet.species %>
+    <li><%= pet.breed %>
+    <li><%= pet.microchip_number %>
+    <li><%= pet.microchip_registry %>
+    <li><%= pet.vet_name %>
+    <li><%= pet.vet_phone %>
+    <li><%= pet.vaccinations %>
+    <li><%= pet.flea_treatment_type %>
+    <li><%= pet.heartworm_treatment_type %>
+  </ul>
+
+<a href="/pets/<%=pet.id%>/edit">EDIT</a>
+<a href="/pets/<%=pet.id%>/delete">Delete</a>
+<a href="/pets">See all pets<a></p>
+<a href="/logout">Log Out</a>

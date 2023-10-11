@@ -1,0 +1,19 @@
+<h1>Places</h1>
+<p>Current list of restaurants and stores that have been reviewed</p>
+
+<ul>
+  <% @places.each do |place| %>
+    <li><b>Name: <%= place.name %></b></li>
+    <li>Street: <%= place.address_1 %></li>
+    <li>Suite: <%= place.address_2 %></li>
+    <li>City: <%= place.city %></li>
+    <li>State: <%= place.state %></li>
+    <li>Zip: <%= place.zip %></li>
+    <li>Changing tables, women's restroom: <%= place.changing_tables_women %></li>
+    <li>Changing tables, men's restroom: <%= place.changing_tables_men %></li>
+    <li>High chairs: <%= place.high_chairs %></li>
+    <li>Slings for carseats: <%= place.slings_for_carseats %></li>
+    <li>Family restroom: <%= place.family_restrooms %></li>
+    <li>Nursing room: <%= place.nursing_rooms %></li>
+  <% end %>
+</ul>

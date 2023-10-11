@@ -1,0 +1,39 @@
+<h1>Welcome <%=@user.username%>!</h1>
+<br>
+<h3>Here are all of your pets:</h3>
+</br>
+<ul>
+<% @user.pets.each do |pet|%>
+  <<li><%= pet.name %> <a href="/pets/<%=pet.id%>/edit">EDIT</a></li>
+  <li><%= pet.species %>
+  <li><%= pet.breed %>
+  <li><%= pet.microchip_number %>
+  <li><%= pet.microchip_registry %>
+  <li><%= pet.vet_name %>
+  <li><%= pet.vet_phone %>
+  <li><%= pet.vaccinations %>
+  <li><%= pet.flea_treatment_type %>
+  <li><%= pet.heartworm_treatment_type %>
+<% end %>
+</ul>
+
+<a href="/pets/new">create a new pet</a>
+<a href="/logout">Log Out</a>
+<a href="/">Back to main page</a>
+
+<!--
+<h3>Other Pets</h3>
+<% Pet.all.each do |pet|%>
+   <li>Owner: <%= User.find(pet.user_id).username %></p>
+  <li><%= pet.name %>
+  <li><%= pet.species %>
+  <li><%= pet.breed %>
+  <li><%= pet.microchip_number %>
+  <li><%= pet.microchip_registry %>
+  <li><%= pet.vet_name %>
+  <li><%= pet.vet_phone %>
+  <li><%= pet.vaccinations %>
+  <li><%= pet.flea_treatment_type %>
+  <li><%= pet.heartworm_treatment_type %>
+<% end %>
+ -->
