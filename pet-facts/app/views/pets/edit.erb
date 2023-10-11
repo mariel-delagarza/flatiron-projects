@@ -1,0 +1,130 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        .title {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        body {
+            background-color: #eaebef;
+            font-family: 'Poppins', sans-serif;
+            /*background-image: url("https://images.unsplash.com/photo-1562119463-f5ac38fc8c47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80");
+            background-repeat: no-repeat;
+            background-size: cover;*/
+        }
+    
+        .container {
+            max-width: 580px;
+            max-height: 920px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .field {
+            width: 95%;
+            opacity: .6;
+        }
+
+        .button {
+            background-color: #f5ccff;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        #basic-info-container {
+            /*background-color: #ddc4ff;*/
+            background-image: url("https://images.unsplash.com/photo-1562946418-c2e2ffdfe13e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80");
+            background-size: cover;
+            padding: 20px;
+        }
+
+        #health-info-container {
+            /*background-color: #c4fffe;*/
+            background-image: url("https://images.unsplash.com/photo-1551730458-be400bef0161?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+            background-size: cover;
+            padding: 20px;
+        }
+
+        #feeding-info-container {
+            /*background-color: #ffb5fa;*/
+            background-image: url("https://images.unsplash.com/photo-1511873289150-1e09e771e570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+            background-size: cover;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+
+<div class="title">
+    <h1>Update <%=@pet.name%>'s profile</h1>
+</div>
+
+<div class="container">
+    <form action="/pets/<%=@pet.id%>" method="post">
+        <input type="hidden" name="_method" value="patch">
+        <div id="basic-info-container">
+            <h3>Basic Information</h3>
+            <p><label for="name">Name:</label>
+            <input class="field" type="text" id="name" value="<%=@pet.name%>" name="name"></p>
+
+            <p><label for="species">Species:</label>
+            <input class="field" type="text" id="species" value="<%=@pet.species%>" name="species"></p>
+
+            <p><label for="breed">Breed:</label>
+            <input class="field" type="text" id="breed" value="<%=@pet.breed%>" name="breed"></p>
+
+            <p><label for="microchip_number">Microchip Number:</label>
+            <input class="field" type="text" id="microchip_number" value="<%=@pet.microchip_number%>" name="microchip_number"></p>
+
+            <p><label for="microchip_registry">Microchip Registry:</label>
+            <input class="field" type="text" id="microchip_registry" value="<%=@pet.microchip_registry%>" name="microchip_registry"></p>
+        </div>
+        <br/>
+        <div id="health-info-container">
+            <h3>Health Information</h3>
+            <p><label for="vet_name">Vet Name:</label>
+            <input class="field" type="text" id="vet_name" value="<%=@pet.vet_name%>" name="vet_name"></p>
+
+            <p><label for="vet_phone">Vet Phone:</label>
+            <input class="field" type="text" id="vet_phone" value="<%=@pet.vet_phone%>" name="vet_phone"></p>
+
+            <p><label for="vaccinations">Vaccinations:</label>
+            <input class="field" type="text" id="vaccinations" value="<%=@pet.vaccinations%>" name="vaccinations"></p>
+
+            <p><label for="flea_treatment_type">Flea treatment type:</label>
+            <input class="field" type="text" id="flea_treatment_type" value="<%=@pet.flea_treatment_type%>" name="flea_treatment_type"></p>
+
+            <p><label for="heartworm_treatment_type">Heartworm treatment type:</label>
+            <input class="field" type="text" id="heartworm_treatment_type" value="<%=@pet.heartworm_treatment_type%>" name="heartworm_treatment_type"></p>
+
+            <p><label for="allergies">Allergies:</label>
+            <input class="field" type="text" id="allergies" value="<%=@pet.allergies%>" name="allergies"></p>
+        </div>
+        <br/>
+        <div id="feeding-info-container">
+            <h3>Feeding Information</h3>
+            <p><label for="food_brand">Food brand:</label>
+            <input class="field" type="text" id="food_brand" value="<%=@pet.food_brand%>" name="food_brand"></p>
+
+            <p><label for="food_serving">Food serving:</label>
+            <input class="field" type="text" id="food_serving" value="<%=@pet.food_serving%>"  name="food_serving"></p>
+
+            <p><label for="feedings_per_day">Feedings per day:</label>
+            <input class="field" type="text" id="feedings_per_day" value="<%=@pet.feedings_per_day%>" name="feedings_per_day"></p>
+
+            <p><label for="comments">Comments:</label>
+            <input class="field" type="text" id="comments" value="<%=@pet.comments%>" name="comments"></p>    
+        </div>
+        <p><input class="button" type="submit" value="submit"></p>
+    </form>
+    <p><a class="button" href="/pets">See all of your pets!</a></p>
+    <br/>
+</div>
+

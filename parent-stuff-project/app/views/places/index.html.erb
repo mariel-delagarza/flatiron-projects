@@ -1,0 +1,13 @@
+<% provide(:title, 'All places') %>
+<h1>All places</h1>
+
+<h2>Don't see a place you're looking for?</h2>
+<h2><%= link_to "Click here to create a new place!", new_place_path%></h2>
+
+<ul class="places">
+  <% @places.each do |place| %>
+    <li>
+      <%= link_to place.name, place %>
+    </li>
+  <% end %>
+</ul>

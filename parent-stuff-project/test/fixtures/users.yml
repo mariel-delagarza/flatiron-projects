@@ -1,0 +1,19 @@
+#A fixture for testing user login.
+
+waffles:
+  name: Waffles Dog
+  email: waffles@dogmail.com
+  password_digest: <%= User.digest('password') %>
+  admin: true
+
+biscuit: 
+  name: Biscuit Boy
+  email: biscuit@dogmail.com
+  password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>

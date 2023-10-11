@@ -1,0 +1,78 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #eaebef;
+    } 
+
+     #title {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #form-container {
+      height: 600px;
+      max-width: 580px;
+      padding: 20px;
+      font-family: 'Poppins', sans-serif;
+      background-image: url("https://images.unsplash.com/photo-1523626797181-8c5ae80d40c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80");
+      background-repeat: no-repeat;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .button {
+      background-color: #f5ccff;
+      border: none;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    #other-button {
+      background-color: #eec2ff;
+      width: 32%;
+      opacity: .7;
+    }
+
+    .input-field {
+      width: 100%;
+      opacity: .7;
+    }
+
+  </style>
+</head>
+
+
+<div id="container">
+  <h1 id="title">Log in to view your pet info</h1>
+  <div id="form-container">
+    <form id="login-form" action="/login" method = "POST">
+      <label for="username" id="username">Username:</label>
+      <br/>
+      <input type="text" id="username" name="username" class="input-field">
+      <br/>
+      <br/>
+      <label for="password" id="password">Password:</label>
+      <br/>
+      <input type="password" id="password" name="password" class="input-field">
+      <br/>
+      <br/>
+      <input class="button" type="submit"> 
+    </form>
+    <br/>
+    <a class="button" id="other-button" href="/users/create">or create an account!</a>
+    <br/>
+    <br/>
+    <a class="button" id="other-button" href="/">go back to home page</a>
+  </div>
+
+</div>
+
+	

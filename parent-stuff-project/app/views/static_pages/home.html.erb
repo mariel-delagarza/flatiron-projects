@@ -1,0 +1,7 @@
+<% if logged_in? %>
+   <%= render 'static_pages/logged_in_home' %>
+<% else %>
+  <%= render  'static_pages/logged_out_home'%>
+<% end %>
+
+<!-- call render with the full path (including static_pages) to make sure that rendering the home pages works in all controllers, not just the Static Pages controller -->
